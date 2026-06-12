@@ -51,11 +51,15 @@
             text-decoration: none;
         }
 
-        /* រៀបចំទំហំឡូហ្គោនៅលើ Header កុំឱ្យខ្ពស់ពេក */
+        /* រៀបចំទំហំឡូហ្គោនៅលើ Header ឱ្យសមសួន */
         .logo-img-header {
-            height: 45px;
+            height: 50px;
             width: auto;
             object-fit: contain;
+            background-color: #000000; /* ដាក់ផ្ទៃខាងក្រោយខ្មៅដើម្បីឱ្យលេចរូបភាពអក្សរមាស */
+            padding: 4px 12px;
+            border-radius: 4px;
+            border: 1px solid var(--gold-accent);
         }
 
         .nav-menu a {
@@ -263,7 +267,13 @@
     <header>
         <div class="nav-container">
             <a href="#" class="logo-link">
-                <img src="https://raw.githubusercontent.com/Arilux-Design/image-storage/main/KV-Wood-Logo-Header.png" alt="KV Wood Material" class="logo-img-header">
+                <svg class="logo-img-header" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="100%" fill="#000000"/>
+                    <rect x="15" y="15" width="60" height="70" fill="none" stroke="#D4AF37" stroke-width="4" rx="4"/>
+                    <path d="M25 30 L45 53 L45 30 M45 53 L65 30 M45 53 L45 70 M55 53 L65 70" stroke="#D4AF37" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <text x="95" y="52" fill="#D4AF37" font-family="'Inter', sans-serif" font-size="24" font-weight="bold" letter-spacing="2">KV WOOD</text>
+                    <text x="95" y="76" fill="#D4AF37" font-family="'Inter', sans-serif" font-size="15" font-weight="600" letter-spacing="4">MATERIAL</text>
+                </svg>
             </a>
             <nav class="nav-menu">
                 <a href="#">ទំព័រដើម</a>
@@ -274,7 +284,17 @@
     </header>
 
     <section class="hero">
-        <img src="https://raw.githubusercontent.com/Arilux-Design/image-storage/main/KV-Wood-Full-Banner.jpg" alt="KV Wood Material Banner" class="hero-banner-image">
+        <svg class="hero-banner-image" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="#000000"/>
+            <rect x="250" y="40" width="300" height="170" fill="none" stroke="#D4AF37" stroke-width="8" rx="6"/>
+            <path d="M310 70 L390 145 L390 70 M390 145 L470 70 M390 145 L390 185 M430 145 L470 185" stroke="#D4AF37" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="400" y="245" fill="#D4AF37" font-family="'Inter', sans-serif" font-size="26" font-weight="bold" text-anchor="middle" letter-spacing="6">WOOD - MATERIAL</text>
+            <line x1="40" y1="275" x2="760" y2="275" stroke="#D4AF37" stroke-width="4"/>
+            <text x="400" y="330" fill="#D4AF37" font-family="'Kantumruuy Pro', sans-serif" font-size="32" font-weight="bold" text-anchor="middle">ផ្គត់ផ្គង់ក្តារ MFC និងគ្រឿងបន្លាស់ សង្ហារឹម</text>
+            <text x="400" y="385" fill="#D4AF37" font-family="'Inter', sans-serif" font-size="24" font-weight="500" text-anchor="middle" letter-spacing="1">Supplying MFC Boards and Furniture Accessories</text>
+            <line x1="40" y1="415" x2="760" y2="415" stroke="#D4AF37" stroke-width="2"/>
+        </svg>
+        
         <h1>KV WOOD MATERIAL</h1>
         <p>ដេប៉ូផ្គត់ផ្គង់បន្ទះឈើកែច្នៃ គ្រឿងតុបតែងផ្ទៃមុខ និងគ្រឿង Hardware ទំនើបៗគ្រប់ប្រភេទ គុណភាពខ្ពស់ សម្រាប់តម្រូវការដេគ័រ និងដំឡើងគ្រឿងសង្ហារឹមគ្រប់កម្រិត។</p>
         <a href="#contact" class="btn-main">ទំនាក់ទំនងសួរតម្លៃ</a>
@@ -304,7 +324,7 @@
                 <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=400&q=80" alt="Laminate Flooring" class="product-img">
                 <div class="product-info">
                     <h3>ក្តារបន្ទះក្រាលការ៉ូ Laminate Flooring</h3>
-                    <p>ក្តារកម្រាលឈើប្រណីត ការពារការជ្រាបទឹក ធន់នឹងសម្ពាធដើរជាន់ និងផ្តល់ភាពកក់ក្តៅដល់សោភ័ណភាពផ្ទះទាំងមូល។</p>
+                    <p>ក្តារកម្រាលឈើប្រណីត ការពារការជ្រាបទឹក ធន់នឹងសម្ពាធដើរជាន់ និងផ្តល់ភាពកក់ក្តៅដល់សោភ័ណភាពផ្ទះទាំងមូល。</p>
                 </div>
             </div>
 
