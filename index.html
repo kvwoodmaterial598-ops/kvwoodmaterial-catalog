@@ -1,78 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="km">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KV Wood Material</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ដេប៉ូផ្គត់ផ្គង់សម្ភារៈបន្ទះឈើ និងគ្រឿងតុបតែងខាងក្នុង</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruuy+Pro:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8B5A2B; /* ពណ៌ឈើ */
+            --secondary-color: #3E2723;
+            --light-bg: #F5F5DC;
+            --dark-text: #2C2C2C;
+        }
 
-<style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#111;
-    color:white;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Kantumruuy Pro', 'Inter', sans-serif;
+        }
 
-header{
-    background:#000;
-    color:#d4af37;
-    padding:20px;
-    text-align:center;
-}
+        body {
+            background-color: #FAFAFA;
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
 
-.hero{
-    text-align:center;
-    padding:100px 20px;
-}
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.hero h1{
-    font-size:50px;
-    color:#d4af37;
-}
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.hero p{
-    font-size:20px;
-}
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
 
-.btn{
-    display:inline-block;
-    padding:15px 30px;
-    background:#d4af37;
-    color:black;
-    text-decoration:none;
-    border-radius:5px;
-    margin-top:20px;
-}
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark-text);
+            margin-left: 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
 
-footer{
-    text-align:center;
-    padding:20px;
-    background:#000;
-}
-</style>
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
 
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 25px auto;
+        }
+
+        .btn-main {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .btn-main:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Categories Section */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px 0;
+            font-size: 28px;
+            position: relative;
+            color: var(--secondary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0 auto;
+        }
+
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1-fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .product-info p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #ECEFF1;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact-grid {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .btn-tg { background-color: #0088cc; }
+        .btn-phone { background-color: #4CAF50; }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 15px; }
+            .hero h1 { font-size: 28px; }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-<h1>KV Wood Material</h1>
-<p>Supplying MFC Boards and Furniture Accessories</p>
-</header>
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">WOOD MATERIAL</a>
+            <nav class="nav-menu">
+                <a href="#">ទំព័រដើម</a>
+                <a href="#products">ផលិតផល</a>
+                <a href="#contact">ទំនាក់ទំនង</a>
+            </nav>
+        </div>
+    </header>
 
-<section class="hero">
-<h1>Premium Wood Materials</h1>
-<p>ដំណោះស្រាយសម្ភារៈឈើ និងគ្រឿងសង្ហារឹមគុណភាពខ្ពស់</p>
+    <section class="hero">
+        <h1>ដេប៉ូផ្គត់ផ្គង់បន្ទះឈើ និងសម្ភារៈតុបតែងខាងក្នុង</h1>
+        <p>យើងខ្ញុំមានលក់ដុំ និងរាយនូវរាល់ប្រភេទក្តារបន្ទះ បន្ទះឈើកែច្នៃគុណភាពខ្ពស់ និងគ្រឿង Hardware ទំនើបៗគ្រប់ប្រភេទ សម្រាប់ជាងមេការ និងក្រុមហ៊ុនដេគ័រ។</p>
+        <a href="#contact" class="btn-main">ទំនាក់ទំនងសួរតម្លៃ</a>
+    </section>
 
-<a class="btn" href="products.html">
-View Products
-</a>
-</section>
+    <section id="products">
+        <h2 class="section-title">កាតាឡុកផលិតផលចម្បង</h2>
+        <div class="products-container">
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=400&q=80" alt="MDF & Plywood" class="product-img">
+                <div class="product-info">
+                    <h3>បន្ទះឈើ និងក្តារបន្ទះ (MDF/Plywood)</h3>
+                    <p>មានគ្រប់កម្រាស់ ចាប់ពីប្រភេទឈើធម្មតា រហូតដល់ប្រភេទឈើការពារជម្រាបទឹក (HMR) ធន់ មិនងាយកោងវៀច ស័ក្តិសមសម្រាប់ធ្វើទូ និងតុគ្រប់ប្រភេទ។</p>
+                </div>
+            </div>
 
-<footer>
-<p>Phone: 089 335 526 | 089 335 516</p>
-<p>Email: kv.wood.material598@gmail.com</p>
-<p>Phnom Penh, Cambodia</p>
-</footer>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=400&q=80" alt="Acrylic & Laminate" class="product-img">
+                <div class="product-info">
+                    <h3>បន្ទះអ៊ុតផ្ទៃមុខ (Acrylic & Laminate)</h3>
+                    <p>ផ្ដល់នូវភាពប្រណីត បែបស៊ីវិល័យ ផ្ទៃមុខរលោងស្អាតខ្លាំង ប្រឆាំងការឆ្កូត និងមានពណ៌ចម្រុះជាច្រើនជម្រើសសម្រាប់រចនាទូផ្ទះបាយ និងបន្ទប់គេង។</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=400&q=80" alt="Kitchen Hardware" class="product-img">
+                <div class="product-info">
+                    <h3>គ្រឿង Hardware ទូផ្ទះបាយ</h3>
+                    <p>ធ្នើរដាក់ចានឆ្នាំង ធ្នើរគ្រឿងទេស ស្លាយទាញ និងហ៊ីងកាត់បន្ថយការទង្គិច ផលិតពីដែកអ៊ីណុកមិនច្រែះ ធន់នឹងការប្រើប្រាស់ធ្ងន់ៗ។</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">ទំនាក់ទំនងមកយើងខ្ញុំ</h2>
+        <p style="margin-bottom: 25px;">លោកអ្នកអាចប្រឹក្សាយោបល់ ផ្ញើទំហំដើម្បីកាត់ ឬសួរតម្លៃតាមរយៈបណ្តាញខាងក្រោម៖</p>
+        
+        <div class="contact-grid">
+            <a href="https://t.me/+85500000000" class="contact-btn btn-tg" target="_blank">
+                💬 ផ្ញើសារទៅកាន់ Telegram
+            </a>
+            
+            <a href="tel:+85500000000" class="contact-btn btn-phone">
+                📞 ហៅទូរស័ព្ទផ្ទាល់ខ្លួន
+            </a>
+        </div>
+        
+        <p style="margin-top: 30px; color: #555;">📍 ទីតាំងស្តុក៖ រាជធានីភ្នំពេញ</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 រក្សាសិទ្ធិគ្រប់យ៉ាង។ រៀបចំឡើងដោយជំនួយបច្ចេកទេស AI។</p>
+    </footer>
 
 </body>
 </html>
