@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ដេប៉ូផ្គត់ផ្គង់សម្ភារៈបន្ទះឈើ និងគ្រឿងតុបតែងខាងក្នុង</title>
+    <title>KV Wood Material - ផ្គត់ផ្គង់សម្ភារៈបន្ទះឈើ និងគ្រឿងតុបតែងខាងក្នុង</title>
     <link href="https://fonts.googleapis.com/css2?family=Kantumruuy+Pro:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #8B5A2B; /* ពណ៌ឈើ */
+            --primary-color: #8B5A2B; 
             --secondary-color: #3E2723;
             --light-bg: #F5F5DC;
             --dark-text: #2C2C2C;
@@ -45,10 +45,11 @@
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
             color: var(--primary-color);
             text-decoration: none;
+            letter-spacing: 1px;
         }
 
         .nav-menu a {
@@ -65,44 +66,46 @@
 
         /* Hero Banner */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 120px 20px;
         }
 
         .hero h1 {
-            font-size: 36px;
+            font-size: 38px;
             margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .hero p {
             font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto 25px auto;
+            max-width: 750px;
+            margin: 0 auto 30px auto;
+            opacity: 0.9;
         }
 
         .btn-main {
             background-color: var(--primary-color);
             color: white;
-            padding: 12px 30px;
+            padding: 12px 35px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: 600;
             display: inline-block;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
 
         .btn-main:hover {
             background-color: var(--secondary-color);
+            transform: translateY(-2px);
         }
 
         /* Categories Section */
         .section-title {
             text-align: center;
-            margin: 50px 0 30px 0;
+            margin: 60px 0 40px 0;
             font-size: 28px;
-            position: relative;
             color: var(--secondary-color);
         }
 
@@ -120,7 +123,7 @@
             margin: 0 auto;
             padding: 0 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1-fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin-bottom: 60px;
         }
@@ -130,45 +133,65 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .product-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
 
         .product-img {
             width: 100%;
-            height: 220px;
+            height: 240px;
             object-fit: cover;
-            background-color: #eee;
+            background-color: #eaeaea;
         }
 
         .product-info {
-            padding: 20px;
+            padding: 25px;
         }
 
         .product-info h3 {
             font-size: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: var(--secondary-color);
+            border-bottom: 2px solid #F5F5F5;
+            padding-bottom: 8px;
         }
 
         .product-info p {
             font-size: 14px;
-            color: #666;
-            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.6;
         }
 
         /* Contact Section */
         .contact-section {
-            background-color: #ECEFF1;
-            padding: 50px 20px;
+            background-color: #EEF2F3;
+            padding: 60px 20px;
             text-align: center;
         }
 
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .info-list {
+            margin-bottom: 35px;
+            font-size: 16px;
+            color: #444;
+            text-align: center;
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 10px;
+        }
+
         .contact-grid {
-            max-width: 600px;
+            max-width: 500px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -179,29 +202,35 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             padding: 15px;
             border-radius: 8px;
             text-decoration: none;
             color: white;
             font-weight: bold;
             font-size: 16px;
+            transition: background 0.3s;
         }
 
         .btn-tg { background-color: #0088cc; }
+        .btn-tg:hover { background-color: #0077b3; }
+        .btn-fb { background-color: #1877F2; }
+        .btn-fb:hover { background-color: #145dbf; }
         .btn-phone { background-color: #4CAF50; }
+        .btn-phone:hover { background-color: #43a047; }
 
         footer {
             background-color: var(--secondary-color);
-            color: #ccc;
+            color: #b0bec5;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             font-size: 14px;
         }
 
         @media (max-width: 768px) {
             .nav-container { flex-direction: column; gap: 15px; }
             .hero h1 { font-size: 28px; }
+            .products-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -209,7 +238,7 @@
 
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">WOOD MATERIAL</a>
+            <a href="#" class="logo">KV WOOD MATERIAL</a>
             <nav class="nav-menu">
                 <a href="#">ទំព័រដើម</a>
                 <a href="#products">ផលិតផល</a>
@@ -219,36 +248,60 @@
     </header>
 
     <section class="hero">
-        <h1>ដេប៉ូផ្គត់ផ្គង់បន្ទះឈើ និងសម្ភារៈតុបតែងខាងក្នុង</h1>
-        <p>យើងខ្ញុំមានលក់ដុំ និងរាយនូវរាល់ប្រភេទក្តារបន្ទះ បន្ទះឈើកែច្នៃគុណភាពខ្ពស់ និងគ្រឿង Hardware ទំនើបៗគ្រប់ប្រភេទ សម្រាប់ជាងមេការ និងក្រុមហ៊ុនដេគ័រ។</p>
+        <h1>KV WOOD MATERIAL</h1>
+        <p>ដេប៉ូផ្គត់ផ្គង់បន្ទះឈើកែច្នៃ គ្រឿងតុបតែងផ្ទៃមុខ និងគ្រឿង Hardware ទំនើបៗគ្រប់ប្រភេទ គុណភាពខ្ពស់ សម្រាប់តម្រូវការដេគ័រ និងដំឡើងគ្រឿងសង្ហារឹមគ្រប់កម្រិត។</p>
         <a href="#contact" class="btn-main">ទំនាក់ទំនងសួរតម្លៃ</a>
     </section>
 
     <section id="products">
-        <h2 class="section-title">កាតាឡុកផលិតផលចម្បង</h2>
+        <h2 class="section-title">ប្រកាសកាតាឡុកផលិតផល</h2>
         <div class="products-container">
             
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=400&q=80" alt="MDF & Plywood" class="product-img">
+                <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=400&q=80" alt="MFC Board" class="product-img">
                 <div class="product-info">
-                    <h3>បន្ទះឈើ និងក្តារបន្ទះ (MDF/Plywood)</h3>
-                    <p>មានគ្រប់កម្រាស់ ចាប់ពីប្រភេទឈើធម្មតា រហូតដល់ប្រភេទឈើការពារជម្រាបទឹក (HMR) ធន់ មិនងាយកោងវៀច ស័ក្តិសមសម្រាប់ធ្វើទូ និងតុគ្រប់ប្រភេទ។</p>
+                    <h3>បន្ទះក្តារ MFC</h3>
+                    <p>បន្ទះក្តារបន្ទះសាច់ម៉ត់អ៊ុតផ្ទៃមុខ Melamine មានពណ៌សាច់ឈើធម្មជាតិ និងពណ៌ទាន់សម័យជាច្រើនជម្រើស ធន់នឹងការឆ្ូត និងងាយស្រួលថែទាំ។</p>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=400&q=80" alt="Acrylic & Laminate" class="product-img">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=400&q=80" alt="Acrylic Panel" class="product-img">
                 <div class="product-info">
-                    <h3>បន្ទះអ៊ុតផ្ទៃមុខ (Acrylic & Laminate)</h3>
-                    <p>ផ្ដល់នូវភាពប្រណីត បែបស៊ីវិល័យ ផ្ទៃមុខរលោងស្អាតខ្លាំង ប្រឆាំងការឆ្កូត និងមានពណ៌ចម្រុះជាច្រើនជម្រើសសម្រាប់រចនាទូផ្ទះបាយ និងបន្ទប់គេង។</p>
+                    <h3>បន្ទះអ៊ុតមុខស្អាត Acrylic Panel</h3>
+                    <p>ផ្តល់នូវផ្ទៃមុខរលោងស្រិល កម្រិតចាំងដូចកញ្ចក់ បង្កើតភាពប្រណីតកម្រិតខ្ពស់សម្រាប់ទូផ្ទះបាយ ស៊ុមទូខោអាវ និងការតុបតែងបែបស៊ីវិល័យ។</p>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=400&q=80" alt="Kitchen Hardware" class="product-img">
+                <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=400&q=80" alt="Laminate Flooring" class="product-img">
                 <div class="product-info">
-                    <h3>គ្រឿង Hardware ទូផ្ទះបាយ</h3>
-                    <p>ធ្នើរដាក់ចានឆ្នាំង ធ្នើរគ្រឿងទេស ស្លាយទាញ និងហ៊ីងកាត់បន្ថយការទង្គិច ផលិតពីដែកអ៊ីណុកមិនច្រែះ ធន់នឹងការប្រើប្រាស់ធ្ងន់ៗ។</p>
+                    <h3>ក្តារបន្ទះក្រាលការ៉ូ Laminate Flooring</h3>
+                    <p>ក្តារកម្រាលឈើប្រណីត ការពារការជ្រាបទឹក ធន់នឹងសម្ពាធដើរជាន់ និងផ្តល់ភាពកក់ក្តៅដល់សោភ័ណភាពផ្ទះទាំងមូល។</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80" alt="Door Systems" class="product-img">
+                <div class="product-info">
+                    <h3>ប្រព័ន្ធទ្វារ Door Systems</h3>
+                    <p>រចនាសម្ព័ន្ធទ្វារបន្ទះឈើកែច្នៃ ស៊ុមទ្វារ និងទ្វាររុញទំនើបៗ កាត់បន្ថយសំឡេងបានល្អ និងមានទម្រង់រឹងមាំយូរអង្វែង។</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" alt="Components" class="product-img">
+                <div class="product-info">
+                    <h3>គ្រឿងបង្គុំបន្ទះឈើ Components</h3>
+                    <p>គ្រឿងបង្គុំផ្សេងៗ ស៊ុមគែម សន្លឹកឈើគែម (Edge Banding) និងសម្ភារៈចំបាច់សម្រាប់បញ្ចប់ការងារតម្លើងឱ្យមានភាពហ្មត់ចត់។</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=400&q=80" alt="Hardware" class="product-img">
+                <div class="product-info">
+                    <h3>គ្រឿងបន្លាស់ និងគ្រឿង Hardware</h3>
+                    <p>ធ្នើរទាញកន្ត្រក ហ៊ីងទ្វារ បង្គុំស្លាយថតតុ និងគ្រឿងដែកអ៊ីណុកទំនើបៗសម្រាប់ទូផ្ទះបាយ និងទូខោអាវ ដំណើរការបិទបើកដោយរលូន។</p>
                 </div>
             </div>
 
@@ -256,24 +309,33 @@
     </section>
 
     <section id="contact" class="contact-section">
-        <h2 class="section-title">ទំនាក់ទំនងមកយើងខ្ញុំ</h2>
-        <p style="margin-bottom: 25px;">លោកអ្នកអាចប្រឹក្សាយោបល់ ផ្ញើទំហំដើម្បីកាត់ ឬសួរតម្លៃតាមរយៈបណ្តាញខាងក្រោម៖</p>
-        
-        <div class="contact-grid">
-            <a href="https://t.me/+85500000000" class="contact-btn btn-tg" target="_blank">
-                💬 ផ្ញើសារទៅកាន់ Telegram
-            </a>
+        <div class="contact-container">
+            <h2 class="section-title">ព័ត៌មានទំនាក់ទំនង</h2>
             
-            <a href="tel:+85500000000" class="contact-btn btn-phone">
-                📞 ហៅទូរស័ព្ទផ្ទាល់ខ្លួន
-            </a>
+            <ul class="info-list">
+                <li>📧 <strong>អ៊ីមែល៖</strong> kv.wood.material598@gmail.com</li>
+                <li>📞 <strong>ទូរស័ព្ទ៖</strong> 089 335 526 / 089 335 516</li>
+                <li>📍 <strong>ទីតាំង៖</strong> រាជធានីភ្នំពេញ (អាសយដ្ឋានលម្អិតនឹងធ្វើការធ្វើបច្ចុប្បន្នភាពពេលក្រោយ)</li>
+            </ul>
+            
+            <div class="contact-grid">
+                <a href="https://t.me/Kvwoo" class="contact-btn btn-tg" target="_blank">
+                    💬 ផ្ញើសារទៅកាន់ Telegram
+                </a>
+                
+                <a href="https://www.facebook.com/share/1Mq3beKy3r/" class="contact-btn btn-fb" target="_blank">
+                    👍 ចូលទៅកាន់ Facebook Page
+                </a>
+                
+                <a href="tel:+85589335526" class="contact-btn btn-phone">
+                    📞 ហៅទៅកាន់លេខ 089 335 526
+                </a>
+            </div>
         </div>
-        
-        <p style="margin-top: 30px; color: #555;">📍 ទីតាំងស្តុក៖ រាជធានីភ្នំពេញ</p>
     </section>
 
     <footer>
-        <p>&copy; 2026 រក្សាសិទ្ធិគ្រប់យ៉ាង។ រៀបចំឡើងដោយជំនួយបច្ចេកទេស AI។</p>
+        <p>&copy; 2026 KV Wood Material. រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
     </footer>
 
 </body>
