@@ -38,17 +38,30 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 15px 20px;
+            padding: 10px 20px; /* បន្ថយ padding បន្តិចដើម្បីសមនឹងទំហំឡូហ្គោ */
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            font-size: 22px;
+        /* រចនាប្លង់ Logo ក្នុង Header */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        .logo-img-header {
+            height: 45px; /* កម្ពស់ឡូហ្គោក្នុងរបារ menu */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 20px;
             font-weight: 700;
             color: var(--primary-color);
-            text-decoration: none;
             letter-spacing: 1px;
         }
 
@@ -66,16 +79,27 @@
 
         /* Hero Banner */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 120px 20px;
+            padding: 80px 20px;
+        }
+
+        /* រចនាប្លង់ Logo ធំចំកណ្តាល Hero */
+        .logo-img-main {
+            max-width: 280px; /* ទំហំឡូហ្គោធំកណ្តាលទំព័រ */
+            height: auto;
+            margin-bottom: 20px;
+            border: 2px solid rgba(139, 90, 43, 0.5); /* ថែមរង្វង់ព្រំខណ្ឌពណ៌ឈើតិចៗ */
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.3);
         }
 
         .hero h1 {
-            font-size: 38px;
+            font-size: 34px;
             margin-bottom: 15px;
             font-weight: 700;
+            color: #E5A93C; /* ប្តូរពណ៌អក្សរចំណងជើងឱ្យចេញពណ៌មាសលេចធ្លោ */
         }
 
         .hero p {
@@ -238,7 +262,10 @@
 
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">KV WOOD MATERIAL</a>
+            <a href="#" class="logo-container">
+                <img src="KV Wood-1.jpg" alt="KV Wood Logo" class="logo-img-header">
+                <span class="logo-text">KV WOOD MATERIAL</span>
+            </a>
             <nav class="nav-menu">
                 <a href="#">ទំព័រដើម</a>
                 <a href="#products">ផលិតផល</a>
@@ -248,6 +275,7 @@
     </header>
 
     <section class="hero">
+        <img src="KV Wood-1.jpg" alt="KV Wood Material" class="logo-img-main">
         <h1>KV WOOD MATERIAL</h1>
         <p>ដេប៉ូផ្គត់ផ្គង់បន្ទះឈើកែច្នៃ គ្រឿងតុបតែងផ្ទៃមុខ និងគ្រឿង Hardware ទំនើបៗគ្រប់ប្រភេទ គុណភាពខ្ពស់ សម្រាប់តម្រូវការដេគ័រ និងដំឡើងគ្រឿងសង្ហារឹមគ្រប់កម្រិត។</p>
         <a href="#contact" class="btn-main">ទំនាក់ទំនងសួរតម្លៃ</a>
@@ -293,7 +321,7 @@
                 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" alt="Components" class="product-img">
                 <div class="product-info">
                     <h3>គ្រឿងបង្គុំបន្ទះឈើ Components</h3>
-                    <p>គ្រឿងបង្គុំផ្សេងៗ ស៊ុមគែម សន្លឹកឈើគែម (Edge Banding) និងសម្ភារៈចំបាច់សម្រាប់បញ្ចប់ការងារតម្លើងឱ្យមានភាពហ្មត់ចត់។</p>
+                    <p>គ្រឿងបង្គុំផ្សេងៗ ស៊ុមគែម សន្លឹកឈើគែម (Edge Banding) និងសម្ភារៈចំបាច់សម្រាប់បញ្ចប់ការងារតម្លើងឱ្យមានភាពហ្មត់ចត់。</p>
                 </div>
             </div>
 
