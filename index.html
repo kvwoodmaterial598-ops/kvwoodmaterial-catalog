@@ -11,6 +11,7 @@
             --secondary-color: #3E2723;
             --light-bg: #F5F5DC;
             --dark-text: #2C2C2C;
+            --gold-accent: #D4AF37;
         }
 
         * {
@@ -38,13 +39,12 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 10px 20px; /* បន្ថយ padding បន្តិចដើម្បីសមនឹងទំហំឡូហ្គោ */
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        /* រចនាប្លង់ Logo ក្នុង Header */
         .logo-container {
             display: flex;
             align-items: center;
@@ -52,14 +52,23 @@
             gap: 10px;
         }
 
-        .logo-img-header {
-            height: 45px; /* កម្ពស់ឡូហ្គោក្នុងរបារ menu */
-            width: auto;
-            object-fit: contain;
+        /* បង្កើត Icon ឈើតំណាងឱ្យឡូហ្គោដើម្បីកុំឱ្យបាក់រូបភាពនៅលើ Header */
+        .logo-icon {
+            width: 35px;
+            height: 35px;
+            background-color: var(--secondary-color);
+            border: 2px solid var(--gold-accent);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-accent);
+            font-weight: bold;
+            font-size: 18px;
         }
 
         .logo-text {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 700;
             color: var(--primary-color);
             letter-spacing: 1px;
@@ -79,34 +88,40 @@
 
         /* Hero Banner */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* រចនាប្លង់ Logo ធំចំកណ្តាល Hero */
-        .logo-img-main {
-            max-width: 280px; /* ទំហំឡូហ្គោធំកណ្តាលទំព័រ */
+        /* កែសម្រួលការបង្ហាញផ្ទាំងរូបភាព KV Wood ឱ្យមានសណ្តាប់ធ្នាប់ មិនឱ្យជាន់អក្សរ */
+        .hero-banner-image {
+            max-width: 100%;
+            width: 550px;
             height: auto;
-            margin-bottom: 20px;
-            border: 2px solid rgba(139, 90, 43, 0.5); /* ថែមរង្វង់ព្រំខណ្ឌពណ៌ឈើតិចៗ */
-            padding: 5px;
-            background-color: rgba(0, 0, 0, 0.3);
+            margin-bottom: 25px;
+            border: 3px solid var(--gold-accent);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border-radius: 6px;
         }
 
         .hero h1 {
-            font-size: 34px;
+            font-size: 32px;
             margin-bottom: 15px;
             font-weight: 700;
-            color: #E5A93C; /* ប្តូរពណ៌អក្សរចំណងជើងឱ្យចេញពណ៌មាសលេចធ្លោ */
+            color: var(--gold-accent);
         }
 
         .hero p {
-            font-size: 18px;
+            font-size: 16px;
             max-width: 750px;
             margin: 0 auto 30px auto;
             opacity: 0.9;
+            line-height: 1.8;
         }
 
         .btn-main {
@@ -253,7 +268,8 @@
 
         @media (max-width: 768px) {
             .nav-container { flex-direction: column; gap: 15px; }
-            .hero h1 { font-size: 28px; }
+            .hero h1 { font-size: 26px; }
+            .hero-banner-image { width: 100%; }
             .products-container { grid-template-columns: 1fr; }
         }
     </style>
@@ -263,7 +279,7 @@
     <header>
         <div class="nav-container">
             <a href="#" class="logo-container">
-                <img src="KV Wood-1.jpg" alt="KV Wood Logo" class="logo-img-header">
+                <div class="logo-icon">KV</div>
                 <span class="logo-text">KV WOOD MATERIAL</span>
             </a>
             <nav class="nav-menu">
@@ -275,7 +291,7 @@
     </header>
 
     <section class="hero">
-        <img src="KV Wood-1.jpg" alt="KV Wood Material" class="logo-img-main">
+        <img src="KV Wood-1.jpg" alt="KV Wood Material Banner" class="hero-banner-image">
         <h1>KV WOOD MATERIAL</h1>
         <p>ដេប៉ូផ្គត់ផ្គង់បន្ទះឈើកែច្នៃ គ្រឿងតុបតែងផ្ទៃមុខ និងគ្រឿង Hardware ទំនើបៗគ្រប់ប្រភេទ គុណភាពខ្ពស់ សម្រាប់តម្រូវការដេគ័រ និងដំឡើងគ្រឿងសង្ហារឹមគ្រប់កម្រិត។</p>
         <a href="#contact" class="btn-main">ទំនាក់ទំនងសួរតម្លៃ</a>
@@ -321,7 +337,7 @@
                 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" alt="Components" class="product-img">
                 <div class="product-info">
                     <h3>គ្រឿងបង្គុំបន្ទះឈើ Components</h3>
-                    <p>គ្រឿងបង្គុំផ្សេងៗ ស៊ុមគែម សន្លឹកឈើគែម (Edge Banding) និងសម្ភារៈចំបាច់សម្រាប់បញ្ចប់ការងារតម្លើងឱ្យមានភាពហ្មត់ចត់。</p>
+                    <p>គ្រឿងបង្គុំផ្សេងៗ ស៊ុមគែម សន្លឹកឈើគែម (Edge Banding) និងសម្ភារៈចំបាច់សម្រាប់បញ្ចប់ការងារតម្លើងឱ្យមានភាពហ្មត់ចត់។</p>
                 </div>
             </div>
 
@@ -329,7 +345,7 @@
                 <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=400&q=80" alt="Hardware" class="product-img">
                 <div class="product-info">
                     <h3>គ្រឿងបន្លាស់ និងគ្រឿង Hardware</h3>
-                    <p>ធ្នើរទាញកន្ត្រក ហ៊ីងទ្វារ បង្គុំស្លាយថតតុ និងគ្រឿងដែកអ៊ីណុកទំនើបៗសម្រាប់ទូផ្ទះបាយ និងទូខោអាវ ដំណើរការបិទបើកដោយរលូន។</p>
+                    <p>ធ្នើរទាញកន្ត្រក ហ៊ីងទ្វារ បង្គុំស្លាយថតតុ និងគ្រឿងដែកអ៊ីណុកទំនើបៗសម្រាប់ទូផ្ទះបាយ និងទូខោអាវ ដំណើរការបិទបើកដោយរលូន Bars។</p>
                 </div>
             </div>
 
